@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import Container from '@mui/material/Container';
 
 export default function Articles() {
   const { articles } = useNews()
@@ -13,10 +14,16 @@ export default function Articles() {
   function articleCard(article, key) {
     return (
       <article className='article-card' key={key}>
-        <h3>{article.title}</h3>
-        <p>{article.summary}</p>
-        <p>{article.news_site}</p>
-        <p>{article.published_at}</p>
+        <div className='img-box'>
+          <img src={article.image_url} alt={article.title} />
+        </div>
+        <div className='article-text'>
+          <h3>{article.title}</h3>
+          <p>{article.summary}</p>
+          <p>{article.news_site}</p>
+          <p>{article.published_at}</p>
+        </div>
+
       </article>
     )
   }
@@ -45,9 +52,9 @@ export default function Articles() {
   }
 
   return (
-    <section className='articles-section'>
+    <section className='article-section'>
       <h2>Articles</h2>
-      <div className='articles-list'>
+      <div className='article-list'>
         {articles.results && articles.results.map(a => articleCard(a, a.id))}
       </div>
 
