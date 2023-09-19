@@ -16,6 +16,7 @@
 * Include a navigation bar and different sections for scrolling through news
 * Implement pagination or infinite scrolling for browsing
 * Accessible design navigable by keyboard
+* Add countdown to next launch
 
 ### Tier 3: Advanced Functionality
 * Implement searching and filtering
