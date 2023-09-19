@@ -68,3 +68,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.articles-section {
+  padding: 1.2em;
+}
+
+.article-card {
+  background-color: #313131;
+  padding: 1.2em;
+  margin: 1.2em;
+  transition: background-color 0.25s;
+}
+
+.article-card:hover {
+  background-color: #424242;
+}
