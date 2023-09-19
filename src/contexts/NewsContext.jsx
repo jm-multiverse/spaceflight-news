@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 
 const NewsContext = React.createContext()
-const apiUrl = "https://api.spaceflightnewsapi.net/v4/"
+const apiUrl = "https://api.spaceflightnewsapi.net/v4"
 
 export function useNews() {
   return useContext(NewsContext)
@@ -13,24 +13,38 @@ export const NewsProvider = ({ children }) => {
   const [reports, setReports] = useState([])
 
   useEffect(() => {
-    fetchFeed()
   }, [])
 
-  function fetchFeed() {
+  async function fetchArticles(limit = 20, page = 1) {
+    const offset = (page - 1) * limit
     try {
-      fetch(`${apiUrl}/articles/?limit=20`)
+      await fetch(`${apiUrl}/articles/?limit=${limit}&offset=${offset}`)
         .then(res => res.json())
         .then(data => {
           setArticles(data)
         })
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
-      fetch(`${apiUrl}/blogs/?limit=20`)
+  async function fetchBlogs(limit = 20, page = 1) {
+    const offset = (page - 1) * limit
+    try {
+      await fetch(`${apiUrl}/blogs/?limit=${limit}&offset=${offset}`)
         .then(res => res.json())
         .then(data => {
           setBlogs(data)
         })
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
-      fetch(`${apiUrl}/reports/?limit=20`)
+  async function fetchReports(limit = 20, page = 1) {
+    const offset = (page - 1) * limit
+    try {
+      await fetch(`${apiUrl}/reports/?limit=${limit}&offset=${offset}`)
         .then(res => res.json())
         .then(data => {
           setReports(data)
@@ -38,16 +52,6 @@ export const NewsProvider = ({ children }) => {
     } catch (error) {
       console.log(error)
     }
-  }
-
-  function getCar(id) {
-    return News.find(car => car.id === id)
-  }
-
-  function addCar(id) {
-  }
-
-  function deleteCar({ id }) {
   }
 
   return <NewsContext.Provider value={{

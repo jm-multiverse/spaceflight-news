@@ -1,15 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 import Nav from './components/Nav'
-import Featured from './sections/Featured'
+import Articles from './sections/Articles'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <main className='app'>
       <Nav />
-      <Featured />
+      <Articles />
     </main>
   )
 }
