@@ -98,6 +98,7 @@ button:focus-visible {
 
 .article-card:hover {
   background-color: #424242;
+  cursor: pointer;
 }
 
 .article-card:focus-within {
@@ -116,4 +117,5 @@ button:focus-visible {
   width: 100%;
   height: auto;
   padding: 0.6em;
+  border-radius: 8px;
 }
