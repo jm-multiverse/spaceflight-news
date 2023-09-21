@@ -1,5 +1,5 @@
 {
-  "name": "vite-react-starter",
+  "name": "react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,22 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.9",
-    "@mui/material": "^5.14.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-material-ui-carousel": "^3.4.2"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.18",
+    "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react": "^4.0.4",
-    "eslint": "^8.46.0",
-    "eslint-plugin-react": "^7.33.1",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "vite": "^4.4.9"
+    "vite": "^4.4.5"
   }
 }
