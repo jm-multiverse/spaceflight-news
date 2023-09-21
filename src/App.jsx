@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import Nav from './components/Nav'
 
 function App() {
 
   return (
-    <>
+    <main className='relative'>
+      <Nav />
 
-    </>
+    </main>
   )
 }
 
