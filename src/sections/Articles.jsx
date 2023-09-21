@@ -28,7 +28,7 @@ export default function Articles() {
     )
   }
 
-  function Card(article, key) {
+  function MUICard(article, key) {
     return (
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
@@ -55,7 +55,7 @@ export default function Articles() {
     <section className='article-section'>
       <h2>Articles</h2>
       <div className='article-list'>
-        {articles.results && articles.results.map(a => articleCard(a, a.id))}
+        {articles.results && articles.results.map(a => MUICard(a, a.id))}
       </div>
 
     </section>
