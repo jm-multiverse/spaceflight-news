@@ -18,7 +18,7 @@ export const NewsProvider = ({ children }) => {
       fetchReports()
   }, [])
 
-  async function fetchArticles(limit = 20, page = 1) {
+  async function fetchArticles(limit = 2, page = 1) {
     const offset = (page - 1) * limit
     try {
       await fetch(`${apiUrl}/articles?limit=${limit}&offset=${offset}`)
@@ -31,7 +31,7 @@ export const NewsProvider = ({ children }) => {
     }
   }
 
-  async function fetchBlogs(limit = 20, page = 1) {
+  async function fetchBlogs(limit = 2, page = 1) {
     const offset = (page - 1) * limit
     try {
       await fetch(`${apiUrl}/blogs/?limit=${limit}&offset=${offset}`)
@@ -44,7 +44,7 @@ export const NewsProvider = ({ children }) => {
     }
   }
 
-  async function fetchReports(limit = 20, page = 1) {
+  async function fetchReports(limit = 2, page = 1) {
     const offset = (page - 1) * limit
     try {
       await fetch(`${apiUrl}/reports/?limit=${limit}&offset=${offset}`)

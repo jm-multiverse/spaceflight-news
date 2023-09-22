@@ -10,13 +10,13 @@ function App() {
     <main className='relative bg-constellation'>
       <Nav />
       <NewsProvider>
-        <section className='padding'>
+        <section className='padding-x padding-t'>
           <Articles />
         </section>
-        <section className='padding'>
+        <section className='padding-x'>
           <Blogs />
         </section>
-        <section className='padding'>
+        <section className='padding-x'>
           <Reports />
         </section>
       </NewsProvider>

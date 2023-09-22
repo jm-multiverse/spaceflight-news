@@ -11,7 +11,8 @@ export default {
       },
       backgroundImage: {
         'constellation': 'url("/src/assets/backgrounds/constellation-light-3.svg")',
-      }
+      },
+      display: ["group-hover"],
     },
   },
   plugins: [],
