@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
       backgroundImage: {
         'constellation': 'url("/src/assets/backgrounds/constellation-light-3.svg")',
       }

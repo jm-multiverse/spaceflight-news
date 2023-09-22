@@ -11,6 +11,7 @@ import spaceShuttle from './space-shuttle.svg'
 import spaceShuttleGray from './space-shuttle-gray.svg'
 import spaceship from './spaceship.svg'
 import spacexLogo from './spacex-logo.svg'
+import rightArrow from './right-arrow.svg'
 
 export {
   hamburger,
@@ -25,5 +26,6 @@ export {
   spaceShuttle,
   spaceShuttleGray,
   spaceship,
-  spacexLogo
+  spacexLogo,
+  rightArrow
 }
