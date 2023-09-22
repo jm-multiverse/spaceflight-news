@@ -13,7 +13,9 @@ export const NewsProvider = ({ children }) => {
   const [reports, setReports] = useState([])
 
   useEffect(() => {
-    fetchArticles()
+    fetchArticles(),
+      fetchBlogs(),
+      fetchReports()
   }, [])
 
   async function fetchArticles(limit = 20, page = 1) {
