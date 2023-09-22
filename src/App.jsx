@@ -3,6 +3,7 @@ import { NewsProvider } from './contexts/NewsContext'
 import Articles from './sections/Articles'
 import Blogs from './sections/Blogs'
 import Reports from './sections/Reports'
+import Search from './sections/Search'
 
 function App() {
 
@@ -10,7 +11,10 @@ function App() {
     <main className='relative bg-constellation'>
       <Nav />
       <NewsProvider>
-        <section className='padding-x padding-t'>
+        <section className='padding-x'>
+          <Search />
+        </section>
+        <section className='padding-x'>
           <Articles />
         </section>
         <section className='padding-x'>
