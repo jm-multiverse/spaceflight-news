@@ -11,7 +11,7 @@ function App() {
     <main className='relative bg-constellation'>
       <Nav />
       <NewsProvider>
-        <section className='padding-x'>
+        <section className='padding-x pt-2'>
           <Search />
         </section>
         <section className='padding-x'>
