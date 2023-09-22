@@ -6,9 +6,9 @@ const Nav = () => {
   return (
     <header className='padding-x py-8 z-10 w-full bg-inherit'>
       <nav className='flex justify-between items-center max-container'>
-        <a className='flex justify-between items-center gap-4' href="/">
+        <a className='flex justify-between items-center gap-6 group' href="/">
           <img
-            className="w-12 h-12 sm:w-16 sm:h-16 hover:animate-ping transition-all"
+            className="w-12 h-12 sm:w-16 sm:h-16 group-hover:animate-ping transition-all"
             src={blackSatelliteOutline}
             alt="Logo"
           />
