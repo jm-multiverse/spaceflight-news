@@ -22,8 +22,8 @@ export default function NewsSection({ title, newsResponse }) {
                   <h2 className='md:text-2xl font-medium mb-4'>{article.title}</h2>
                   <p className='md:text-lg font-normal mb-4'>{article.summary}</p>
                   <div className='flex flex-col gap-1 sm:flex-row sm:gap-4'>
-                    <p className='text-sm font-normal text-slate-600'>{date.toLocaleDateString()}</p>
-                    <p className='text-sm font-normal text-slate-600'>{article.news_site}</p>
+                    <p className='text-sm font-normal text-slate-600 border p-1 px-2 rounded-2xl'>{date.toLocaleDateString()}</p>
+                    <p className='text-sm font-normal text-slate-600 border p-1 px-2 rounded-2xl'>{article.news_site}</p>
                   </div>
                 </a>
               </article>
