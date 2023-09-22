@@ -7,7 +7,7 @@ export default function Articles() {
 
   return (
     <section className='bg-inherit rounded'>
-      <a className='flex justify-start items-center gap-2 mt-8 mb-6' href="/">
+      <a className='flex justify-start items-center gap-2 mt-12 mb-8' href="/">
         <h2 className='text-3xl font-semibold'>Articles</h2>
       </a>
       <div className='mb-8'>
