@@ -3,7 +3,7 @@
 ## Technology Stack
 * Frontend Framework: React.js
 * State Management: React Context
-* CSS Framework: Material UI
+* CSS Framework: Tailwind
 * Navigation: React Router
 
 ## Features and Functionality
