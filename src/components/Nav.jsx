@@ -6,13 +6,13 @@ const Nav = () => {
   return (
     <header className='padding-x py-8 z-10 w-full bg-inherit'>
       <nav className='flex justify-between items-center max-container'>
-        <a className='flex justify-between items-center gap-6 group' href="/">
+        <a className='flex justify-between items-center group' href="/">
           <img
             className="w-12 h-12 sm:w-16 sm:h-16 group-hover:animate-ping transition-all"
             src={blackSatelliteOutline}
             alt="Logo"
           />
-          <h1 className='sm:text-xl'>Spaceflight News</h1>
+          <h1 className='sm:text-xl px-4'>Spaceflight News</h1>
         </a>
         <ul className="flex-1 flex justify-end items-center gap-8 me-8 max-lg:hidden">
           {navLinks.map((item) => (

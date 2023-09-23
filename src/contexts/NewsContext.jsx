@@ -8,63 +8,32 @@ export function useNews() {
 }
 
 export const NewsProvider = ({ children }) => {
-  const [articles, setArticles] = useState([])
-  const [blogs, setBlogs] = useState([])
-  const [reports, setReports] = useState([])
 
-  useEffect(() => {
-    // fetchNews()
-  }, [])
-
-  async function fetchNews() {
-    fetchArticles();
-    fetchBlogs();
-    fetchReports();
-  }
-
-  async function fetchArticles(limit = 2, page = 1) {
-    const offset = (page - 1) * limit
+  async function fetchSchema(name, parameters) {
+    const baseUrl = `${apiUrl}/${name}?`
+    const params = new URLSearchParams(parameters)
+    const url = baseUrl + params.toString()
     try {
-      await fetch(`${apiUrl}/articles?limit=${limit}&offset=${offset}`)
+      const response = await fetch(url)
         .then(res => res.json())
-        .then(data => {
-          setArticles(data)
-        })
+        .then(data => data)
+      return response
     } catch (error) {
       console.log(error)
     }
   }
 
-  async function fetchBlogs(limit = 2, page = 1) {
-    const offset = (page - 1) * limit
-    try {
-      await fetch(`${apiUrl}/blogs/?limit=${limit}&offset=${offset}`)
-        .then(res => res.json())
-        .then(data => {
-          setBlogs(data)
-        })
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  async function fetchReports(limit = 2, page = 1) {
-    const offset = (page - 1) * limit
-    try {
-      await fetch(`${apiUrl}/reports/?limit=${limit}&offset=${offset}`)
-        .then(res => res.json())
-        .then(data => {
-          setReports(data)
-        })
-    } catch (error) {
-      console.log(error)
-    }
+  async function fetchHomePageNews() {
+    const articles = await fetchSchema('articles', { limit: 2 })
+    const blogs = await fetchSchema('blogs', { limit: 2 })
+    const reports = await fetchSchema('reports', { limit: 2 })
+    const news = { articles, blogs, reports }
+    return news
   }
 
   return <NewsContext.Provider value={{
-    articles,
-    blogs,
-    reports,
+    fetchSchema,
+    fetchHomePageNews
   }} >
     {children}
   </NewsContext.Provider>

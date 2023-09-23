@@ -1,31 +1,23 @@
 import Nav from './components/Nav'
+import Search from './components/Search'
 import { NewsProvider } from './contexts/NewsContext'
-import Announcements from './sections/Announcements'
-import Articles from './sections/Articles'
-import Blogs from './sections/Blogs'
-import Reports from './sections/Reports'
-import Search from './sections/Search'
+import HomePageNews from './sections/HomePageNews'
+import Announcements from './components/Announcements'
+
 
 function App() {
-
   return (
     <main className='relative bg-constellation'>
       <Nav />
       <NewsProvider>
-        <section className='padding-x pt-4'>
+        <section className='padding-x py-4'>
           <Search />
         </section>
-        <section className='padding'>
+        <section className='padding-x py-4'>
           <Announcements />
         </section>
-        <section className='padding-x'>
-          <Articles />
-        </section>
-        <section className='padding-x'>
-          <Blogs />
-        </section>
-        <section className='padding-x'>
-          <Reports />
+        <section className='padding-x py-4'>
+          <HomePageNews />
         </section>
       </NewsProvider>
     </main>
