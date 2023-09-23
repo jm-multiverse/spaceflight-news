@@ -1,5 +1,6 @@
 import Nav from './components/Nav'
 import { NewsProvider } from './contexts/NewsContext'
+import Announcements from './sections/Announcements'
 import Articles from './sections/Articles'
 import Blogs from './sections/Blogs'
 import Reports from './sections/Reports'
@@ -13,6 +14,9 @@ function App() {
       <NewsProvider>
         <section className='padding-x pt-4'>
           <Search />
+        </section>
+        <section className='padding'>
+          <Announcements />
         </section>
         <section className='padding-x'>
           <Articles />

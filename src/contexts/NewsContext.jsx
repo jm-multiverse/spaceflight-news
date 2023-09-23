@@ -13,10 +13,14 @@ export const NewsProvider = ({ children }) => {
   const [reports, setReports] = useState([])
 
   useEffect(() => {
-    fetchArticles(),
-      fetchBlogs(),
-      fetchReports()
+    // fetchNews()
   }, [])
+
+  async function fetchNews() {
+    fetchArticles();
+    fetchBlogs();
+    fetchReports();
+  }
 
   async function fetchArticles(limit = 2, page = 1) {
     const offset = (page - 1) * limit

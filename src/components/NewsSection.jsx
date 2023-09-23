@@ -4,7 +4,7 @@ export default function NewsSection({ title, newsResponse }) {
   console.log(newsResponse)
   return (
     <section className='bg-inherit rounded'>
-      <a className='flex justify-start items-baseline gap-6 p-3 pb-5 mt-10 mb-4 group hover:translate-x-1 transition-all' href="/">
+      <a className='flex justify-start items-baseline gap-6 p-3 pb-5 mt-10 mb-4 group hover:translate-x-1 transition-all w-fit' href="/">
         <h2 className='text-2xl md:text-3xl font-semibold'>
           {title}
         </h2>
