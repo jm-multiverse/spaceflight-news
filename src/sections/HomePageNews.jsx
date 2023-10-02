@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useNews } from '../contexts/NewsContext.jsx'
-import Announcements from '../components/Announcements.jsx'
-import Search from '../components/Search.jsx'
 import NewsSection from '../components/NewsSection.jsx'
 
 function Home() {

@@ -7,20 +7,22 @@ import Announcements from './components/Announcements'
 
 function App() {
   return (
-    <main className='relative bg-constellation'>
+    <>
       <Nav />
-      <NewsProvider>
-        <section className='padding-x py-4'>
-          <Search />
-        </section>
-        <section className='padding-x py-4'>
-          <Announcements />
-        </section>
-        <section className='padding-x py-4'>
-          <HomePageNews />
-        </section>
-      </NewsProvider>
-    </main>
+      <main className=''>
+        <NewsProvider>
+          <section className='padding-x py-4 max-container'>
+            <Search />
+          </section>
+          <section className='padding-x py-4 max-container'>
+            <Announcements />
+          </section>
+          <section className='padding-x py-4 max-container'>
+            <HomePageNews />
+          </section>
+        </NewsProvider>
+      </main>
+    </>
   )
 }
 
