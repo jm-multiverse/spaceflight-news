@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext } from "react"
 
 const NewsContext = React.createContext()
 const apiUrl = "https://api.spaceflightnewsapi.net/v4"
