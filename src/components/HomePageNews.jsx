@@ -17,9 +17,9 @@ function Home() {
   function News() {
     return (
       <>
-        <NewsSection title='Articles' newsResponse={news.articles} />
-        <NewsSection title='Blogs' newsResponse={news.blogs} />
-        <NewsSection title='Reports' newsResponse={news.reports} />
+        <NewsSection title='Articles' newsResponse={news.articles} href='/articles' />
+        <NewsSection title='Blogs' newsResponse={news.blogs} href='/blogs' />
+        <NewsSection title='Reports' newsResponse={news.reports} href='/reports' />
       </>
     )
   }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { blackSatelliteOutline } from '../assets/icons'
 import { hamburger } from '../assets/icons'
 import { navLinks } from '../constants'
@@ -6,20 +7,20 @@ const Nav = () => {
   return (
     <header className='padding-x py-8 z-10 w-full bg-inherit'>
       <nav className='flex justify-between items-center max-container'>
-        <a className='flex justify-between items-center group' href="/">
+        <Link className='flex justify-between items-center group' href="/">
           <img
             className="w-12 h-12 sm:w-16 sm:h-16 group-hover:animate-ping transition-all"
             src={blackSatelliteOutline}
             alt="Logo"
           />
           <h1 className='sm:text-xl px-4'>Spaceflight News</h1>
-        </a>
+        </Link>
         <ul className="flex-1 flex justify-end items-center gap-8 me-8 max-lg:hidden">
           {navLinks.map((item) => (
             <li key={item.label}>
-              <a href={item.href} className='leading-normal text-lg text-slate-gray hover:font-medium'>
+              <Link to={item.href} className='leading-normal text-lg text-slate-gray border-b-2 border-b-transparent hover:border-b-slate-600'>
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

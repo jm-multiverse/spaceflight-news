@@ -1,18 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function NewsSection({ title, newsResponse }) {
+export default function NewsSection({ title, newsResponse, href }) {
   return (
     <section className='bg-inherit'>
-      <a
+      <Link
         className='flex w-fit items-baseline gap-6 py-3 my-4 
           group hover:translate-x-1 transition-all '
-        href="/"
+        to={href}
       >
         <h2 className='text-2xl md:text-3xl font-semibold'>
           {title}
         </h2>
         <span className='text-xl md:text-2xl font-normal text-transparent  transition-all duration-150 group-hover:text-slate-600 group-focus:text-slate-600'>Browse all</span>
-      </a>
+      </Link>
       <div>
         {newsResponse.results &&
           newsResponse.results.map((article) => {
