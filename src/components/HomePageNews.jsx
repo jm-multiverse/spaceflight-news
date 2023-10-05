@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNews } from '../contexts/NewsContext.jsx'
-import NewsSection from '../components/NewsSection.jsx'
+import NewsSection from './NewsSection.jsx'
 
 function Home() {
   const { fetchHomePageNews } = useNews()

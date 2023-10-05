@@ -1,6 +1,6 @@
 import React from 'react'
 import Announcements from '../components/Announcements'
-import HomePageNews from '../sections/HomePageNews'
+import HomePageNews from '../components/HomePageNews'
 import Search from '../components/Search'
 import { NewsProvider } from '../contexts/NewsContext'
 
