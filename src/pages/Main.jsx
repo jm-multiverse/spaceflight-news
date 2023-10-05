@@ -1,9 +1,11 @@
 import React from 'react'
-import HomePageNews from '../sections/HomePageNews'
+import Home from '../sections/Home'
 import Nav from '../components/Nav'
 import { NewsProvider } from '../contexts/NewsContext'
 import { Routes, Route } from 'react-router-dom'
-import NewsScrollable from '../components/NewsScrollable'
+import Articles from '../sections/Articles'
+import Blogs from '../sections/Blogs'
+import Reports from '../sections/Reports'
 
 export default function Main() {
   return (<>
@@ -11,8 +13,10 @@ export default function Main() {
     <main className=''>
       <NewsProvider>
         <Routes>
-          <Route path='/' element={<HomePageNews />} />
-          <Route path='/articles' element={<NewsScrollable schemaName='articles' title='Articles' />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/articles' element={<Articles />} />
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='/reports' element={<Reports />} />
         </Routes>
       </NewsProvider>
     </main>
