@@ -1,18 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function NewsSection({ title, newsResponse, href }) {
+export default function NewsSection({ title, newsResponse, href, noBrowse }) {
+
   return (
     <section className='bg-inherit'>
       <Link
-        className='flex w-fit items-baseline gap-6 py-3 my-4 
-          group hover:translate-x-1 transition-all '
+        className={'flex w-fit items-baseline gap-6 py-3 my-4 ' +
+          (!noBrowse && 'group hover:translate-x-1 transition-all ')}
         to={href}
       >
         <h2 className='text-2xl md:text-3xl font-semibold'>
           {title}
         </h2>
-        <span className='text-xl md:text-2xl font-normal text-transparent  transition-all duration-150 group-hover:text-slate-600 group-focus:text-slate-600'>Browse all</span>
+        {!noBrowse &&
+          <span className='text-xl md:text-2xl font-normal text-transparent  transition-all duration-150 group-hover:text-slate-600 group-focus:text-slate-600'>Browse all</span>
+        }
       </Link>
       <div>
         {newsResponse.results &&

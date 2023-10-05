@@ -1,19 +1,12 @@
-import Nav from './components/Nav'
-import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Main from './pages/Main.jsx'
 
 function App() {
   return (
     <>
-      <Nav />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/articles' element={<Home />} />
-        <Route path='/blogs' element={<Home />} />
-        <Route path='/reports' element={<Home />} />
-        <Route path='/about' element={<Home />} />
-        <Route path='/login' element={<Home />} />
+        <Route path='*' element={<Main />} />
       </Routes>
     </>
   )
