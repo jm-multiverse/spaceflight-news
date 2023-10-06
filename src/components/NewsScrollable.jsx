@@ -32,10 +32,17 @@ export default function NewsScrollable({ title, schema }) {
       setNews(newNews)
     }
 
-    return (
-      <div className='flex justify-center'>
-        <button className={buttonClassNames} onClick={handleOnClick}>Load More</button>
-      </div>
+    return (<>
+      {news.next ? (
+        <div className='flex justify-center'>
+          <button className={buttonClassNames} onClick={handleOnClick}>Load More</button>
+        </div>
+      ) : (
+        <span className='text-center block text-gray-400'>No more news to load.</span>
+      )
+      }
+
+    </>
     )
   }
 

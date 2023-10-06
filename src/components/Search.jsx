@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Search() {
-  // TODO: Add dropdown menu for search filters: All, Articles, Blogs, Reports
   const searchFilters = [
     { label: 'All', value: 'all' },
     { label: 'Articles', value: 'articles' },
