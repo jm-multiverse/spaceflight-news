@@ -39,7 +39,7 @@ export default function Search() {
 
       <button
         type='submit'
-        className='inline-flex justify-center py-2 px-4 border shadow-sm text-base font-medium rounded-md bg-sky-500 text-white hover:bg-sky-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-blue-500'
+        className='inline-flex justify-center py-2 px-4 border shadow-sm text-base font-medium rounded-md bg-sky-600 text-white hover:bg-sky-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-blue-500'
       >
         Search
       </button>
