@@ -3,6 +3,6 @@ import NewsScrollable from '../components/NewsScrollable'
 
 export default function Reports() {
   return (
-    <NewsScrollable schemaName='reports' title='Reports' />
+    <NewsScrollable schema='reports' title='Reports' />
   )
 }
