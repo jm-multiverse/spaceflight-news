@@ -31,9 +31,21 @@ export const NewsProvider = ({ children }) => {
     return news
   }
 
+  async function fetchNext(url) {
+    try {
+      const response = await fetch(url)
+        .then(res => res.json())
+        .then(data => data)
+      return response
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return <NewsContext.Provider value={{
     fetchSchema,
-    fetchHomePageNews
+    fetchHomePageNews,
+    fetchNext
   }} >
     {children}
   </NewsContext.Provider>
