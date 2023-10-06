@@ -8,30 +8,35 @@ import { useNews } from '../contexts/NewsContext'
 export default function Articles() {
   const { fetchSchema } = useNews()
   const [news, setNews] = useState(null)
+  const [pageNumber, setPageNumber] = useState(1)
 
   useEffect(() => {
     async function getNews() {
-      const news = await fetchSchema('articles', { limit: 10 })
+      const news = await fetchSchema('articles', { limit: 10, offset: 0 })
       console.log(news)
       setNews(news)
     }
     getNews()
   }, [])
 
-  function PageControls() {
-    const nullClassNames = 'py-1 px-3 border text-lg text-gray-400 cursor-not-allowed focus:outline-none border-gray-400 rounded '
-    const clickableClassNames = 'py-1 px-3 text-lg border border-radius rounded border-gray-400 hover:bg-gray-100 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-opacity-50 focus:ring-offset-opacity-50 focus:border-gray-400 focus:border-opacity-50 hover:shadow-md'
+  function LoadMoreButton() {
+    const buttonClassNames = 'py-1 px-3 text-lg border border-radius rounded border-gray-400 hover:bg-gray-100 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-opacity-50 focus:ring-offset-opacity-50 focus:border-gray-400 focus:border-opacity-50 hover:shadow-md'
 
-    const previousClassNames = news && news.previous ? clickableClassNames : nullClassNames
-    const nextClassNames = news && news.next ? clickableClassNames : nullClassNames
+    async function handleOnClick() {
+      setPageNumber(pageNumber + 1)
+      const nextNews = await fetchSchema('articles', { limit: 10, offset: pageNumber * 10 })
+      console.log(news)
+      console.log(nextNews)
+      const newNews = {
+        ...news,
+        results: [...news.results, ...nextNews.results]
+      }
+      setNews(newNews)
+    }
 
     return (
-      <div className='flex justify-end gap-3 p-2'>
-        <span className='text-lg text-gray-400 '>
-          {news && news.count.toString()} results
-        </span>
-        <button className={previousClassNames}>Previous</button>
-        <button className={nextClassNames}>Next</button>
+      <div className='flex justify-center'>
+        <button className={buttonClassNames} onClick={handleOnClick}>Load More</button>
       </div>
     )
   }
@@ -46,9 +51,8 @@ export default function Articles() {
         Articles
       </h1>
       <section className='py-4 max-container'>
-        <PageControls />
         {news && <NewsList newsResponse={news} />}
-        <PageControls />
+        <LoadMoreButton />
       </section>
     </main>
   </>
