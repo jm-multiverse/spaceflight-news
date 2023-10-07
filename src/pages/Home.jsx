@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useNews } from '../contexts/NewsContext.jsx'
 import Nav from '../components/Nav.jsx'
-import Search from '../components/Search.jsx'
+import SearchBar from '../components/SearchBar.jsx'
 import Announcements from '../components/Announcements.jsx'
 import NewsList from '../components/NewsList.jsx'
 
@@ -56,7 +56,7 @@ function Home() {
       <Nav />
       <main className='padding-x py-4 max-container'>
         <section className='py-4'>
-          <Search />
+          <SearchBar />
         </section>
         <section className='py-4'>
           <Announcements />

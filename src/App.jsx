@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Articles from './pages/Articles'
 import Blogs from './pages/Blogs'
 import Reports from './pages/Reports'
+import SearchResults from './pages/SearchResults'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/articles' element={<Articles />} />
           <Route path='/blogs' element={<Blogs />} />
           <Route path='/reports' element={<Reports />} />
+          <Route path='/search' element={<SearchResults />} />
         </Routes>
       </NewsProvider>
     </>

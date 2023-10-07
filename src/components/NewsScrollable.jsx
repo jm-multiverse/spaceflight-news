@@ -1,7 +1,7 @@
 import React from 'react'
 import NewsList from '../components/NewsList'
 import Nav from '../components/Nav'
-import Search from '../components/Search'
+import SearchBar from './SearchBar'
 import { useEffect, useState } from 'react'
 import { useNews } from '../contexts/NewsContext'
 
@@ -38,7 +38,7 @@ export default function NewsScrollable({ title, schema }) {
           <button className={buttonClassNames} onClick={handleOnClick}>Load More</button>
         </div>
       ) : (
-        <span className='text-center block text-gray-400'>No more news to load.</span>
+        <span className='text-center block text-gray-400'>End of results.</span>
       )
       }
 
@@ -50,7 +50,7 @@ export default function NewsScrollable({ title, schema }) {
     <Nav />
     <main className='padding-x py-4 max-container'>
       <section className='py-4'>
-        <Search />
+        <SearchBar />
       </section>
       <h1 className='py-4 text-2xl md:text-3xl font-semibold'>
         {title}

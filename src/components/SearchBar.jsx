@@ -1,12 +1,23 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
-export default function Search() {
+export default function SearchBar() {
+  const navigateTo = useNavigate();
+
   const searchFilters = [
     { label: 'All', value: 'all' },
     { label: 'Articles', value: 'articles' },
     { label: 'Blogs', value: 'blogs' },
     { label: 'Reports', value: 'reports' },
   ]
+
+  function handleOnClick(e) {
+    e.preventDefault();
+    const searchFilter = document.getElementById('search-filter').value;
+    const searchQuery = document.getElementById('search').value;
+    const searchUrl = `/search?filter=${searchFilter}&q=${searchQuery}`;
+    navigateTo(searchUrl);
+  }
 
   return (
     <form className='flex flex-col gap-2 sm:flex-row'>
@@ -39,6 +50,7 @@ export default function Search() {
       <button
         type='submit'
         className='inline-flex justify-center py-2 px-4 border shadow-sm text-base font-medium rounded-md bg-sky-600 text-white hover:bg-sky-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-blue-500'
+        onClick={handleOnClick}
       >
         Search
       </button>
