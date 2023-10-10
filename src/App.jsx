@@ -13,11 +13,6 @@ import styles from './style.js'
 const App = () => (
   <div className='bg-white w-full overflow-hidden'>
     <NewsProvider>
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Nav />
-        </div>
-      </div>
       <Routes>
         <Route path='/' element={<Hero />} />
       </Routes>

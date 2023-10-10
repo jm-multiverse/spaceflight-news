@@ -45,7 +45,7 @@
   }
 }
 
-.text-gradient {
+.text--blue-gradient {
   background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
       #def9fa 0.89%,
       #bef3f5 17.23%,
@@ -70,28 +70,28 @@
   text-fill-color: transparent;
 }
 
-.text-purple-gradient-2 {
+.text-purple-gradient {
   background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
-      #92a6ff 0.89%,
-      #8598d3 17.23%,
-      #846bc8 42.04%,
-      #6d54eb 55.12%,
-      #6155d5 71.54%,
-      #3d23a4 110%);
+      #f3f2fc 0.89%,
+      #fffcd4 17.23%,
+      #dfaefffa 42.04%,
+      #c2c3f0 55.12%,
+      #aa86f3 71.54%,
+      #b8abff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
 }
 
-.text-purple-gradient {
+.text-purple-gradient-2 {
   background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
-      #ffffff 0.89%,
-      #c8cacf 17.23%,
-      #bcbcbc 42.04%,
-      #e7e7e7 55.12%,
-      #a2a2a2 71.54%,
-      #c6c6c6 110%);
+      #d7bff1 0.89%,
+      #c5bae0 17.23%,
+      #e6defd 42.04%,
+      #b0a3f1 55.12%,
+      #dedbff 71.54%,
+      #ad9dee 110%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -133,17 +133,31 @@
 }
 
 .bg-hero {
-  background: rgba(0, 0, 0, 0.5);
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background: url('./assets/images/jwst-orion-mosaic.jpg') no-repeat center center / cover;
+  background: url('./assets/images/jwst-birth-suns.jpg') no-repeat center center / cover;
 }
 
 .bg-translucent-black {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(0px);
+
+}
+
+.bg-translucent-black-sm {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.text-outline {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.text-drop-shadow {
+  filter: drop-shadow(2px 2px 8px rgb(0, 0, 0));
 }
 
 .box-shadow {
