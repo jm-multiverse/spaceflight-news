@@ -1,8 +1,13 @@
-# React + Vite
+# Spaceflight News
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website is for browsing news related to spaceflight news articles, blogs, and reports. 
 
-Currently, two official plugins are available:
+It was built using
+* [React + Vite](https://vitejs.dev/)
+* [Tailwind CSS](https://tailwindcss.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It's integrated with the Spaceflight News API, a free-to-use, public API that provides up-to-date spaceflight news.
+* [Spaceflight News API Website](https://spaceflightnewsapi.net/)
+* [API Documentation](https://api.spaceflightnewsapi.net/v4/docs/)
+* [The Space Devs GitHub](https://github.com/TheSpaceDevs)
+
