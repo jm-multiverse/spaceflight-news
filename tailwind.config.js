@@ -1,37 +1,63 @@
+const themeSwapper = require('tailwindcss-theme-swapper')
+
+const lightTheme = {
+  backgroundImage: {
+    'constellation': 'url("/src/assets/backgrounds/constellation-light.svg")',
+    'hamburger': 'url("/src/assets/icons/hamburger-black.svg")',
+    'satellite': 'url("/src/assets/icons/satellite-black.svg")',
+    'semi-transparent': 'linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.0))',
+  },
+  colors: {
+    primary: 'black',
+  },
+
+}
+
+const darkTheme = {
+  backgroundImage: {
+    'constellation': 'url("/src/assets/backgrounds/constellation-dark.svg")',
+    'hamburger': 'url("/src/assets/icons/hamburger-white.svg")',
+    'satellite': 'url("/src/assets/icons/satellite-white.svg")',
+  },
+  colors: {
+    primary: 'white',
+  },
+}
+
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      aspectRatio: {
-        '4/3': '4 / 3',
+      animation: {
+        'pulse-slow': 'pulse 3s infinite',
       },
       backgroundImage: {
-        'constellation': 'url("/src/assets/backgrounds/constellation-light-3.svg")',
+        'mosaic': 'url("/src/assets/backgrounds/jwst-orion-mosaic.jpg")',
+        'mosaic-long': 'url("/src/assets/backgrounds/jwst-orion-mosaic-long.jpg")',
       },
-      colors: {
-        primary: "#00040f",
-        secondary: "#00f6ff",
-        dimWhite: "rgba(255, 255, 255, 0.7)",
-        dimBlue: "rgba(9, 151, 124, 0.1)",
-      },
-      display: ["group-hover"],
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
     },
-    screens: {
-      xs: "480px",
-      ss: "620px",
-      sm: "768px",
-      md: "1060px",
-      lg: "1200px",
-      xl: "1700px",
-    },
   },
-  plugins: [],
+  plugins: [
+    themeSwapper({
+      themes: [
+        {
+          name: 'base',
+          selectors: [':root'],
+          theme: lightTheme,
+        },
+        {
+          name: 'dark',
+          selectors: ['.dark'],
+          theme: darkTheme,
+        },
+      ],
+    }),
+  ],
 }
-

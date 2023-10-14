@@ -1,11 +1,11 @@
-import hamburger from './hamburger.svg'
-import blackSatelliteOutline from './black-satellite-outline.svg'
-import whiteSatelliteOutline from './white-satellite-outline.svg'
-import rightArrow from './right-arrow.svg'
+import facebook from "./facebook.svg";
+import instagram from "./instagram.svg";
+import linkedin from "./linkedin.svg";
+import twitter from "./twitter.svg";
 
 export {
-  hamburger,
-  blackSatelliteOutline,
-  whiteSatelliteOutline,
-  rightArrow
-}
+  facebook,
+  instagram,
+  linkedin,
+  twitter,
+};

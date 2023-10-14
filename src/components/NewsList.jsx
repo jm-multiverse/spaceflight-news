@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function NewsList({ newsResponse }) {
-  console.log(newsResponse)
   return (
     <>
       {newsResponse.results &&

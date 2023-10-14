@@ -13,6 +13,8 @@ const styles = {
 
   marginX: "sm:mx-16 mx-6",
   marginY: "sm:my-16 my-6",
+
+  pageWidth: "p-6 max-w-screen-xl lg:w-4/5 sm:w-11/12 m-auto",
 };
 
 export const layout = {
