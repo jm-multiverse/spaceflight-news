@@ -20,7 +20,7 @@ export default function SearchBar() {
   }
 
   return (
-    <form className='flex flex-col gap-2 sm:flex-row'>
+    <form className='searchbar py-4 pb-8 flex flex-col gap-2 sm:flex-row'>
       <label htmlFor='search-filter' className='sr-only'>
         Search Filter
       </label>
@@ -49,7 +49,7 @@ export default function SearchBar() {
 
       <button
         type='submit'
-        className='inline-flex justify-center py-2 px-4 border shadow-sm text-base font-medium rounded-md bg-sky-600 text-white hover:bg-sky-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-blue-500'
+        className='inline-flex justify-center py-2 px-4 border shadow-sm text-base font-medium rounded-md bg-slate-700 text-white hover:bg-sky-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-blue-500'
         onClick={handleOnClick}
       >
         Search

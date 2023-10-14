@@ -1,9 +1,11 @@
 import React from 'react'
 import NewsList from '../components/NewsList'
-import Nav from '../components/Nav'
+import Navbar from '../components/Navbar'
 import SearchBar from './SearchBar'
+import LoadingSpinner from './LoadingSpinner'
 import { useEffect, useState } from 'react'
 import { useNews } from '../contexts/NewsContext'
+import styles from '../styles.js'
 
 export default function NewsScrollable({ title, schema }) {
   const { fetchSchema } = useNews()
@@ -46,9 +48,19 @@ export default function NewsScrollable({ title, schema }) {
     )
   }
 
-  return (<>
-    <Nav />
-    <main className='padding-x py-4 max-container'>
+  function Loading() {
+    return (
+      <div className='flex flex-col pt-12 justify-center items-center'>
+        <h1 className='text-2xl font-semibold'>Loading...</h1>
+        <br />
+        <LoadingSpinner />
+      </div>
+    )
+  }
+
+  return (<div className='news-scrollable bg-constellation h-full'>
+    <Navbar />
+    <main className={`${styles.pageWidth}`} >
       <section className='py-4'>
         <SearchBar />
       </section>
@@ -56,13 +68,15 @@ export default function NewsScrollable({ title, schema }) {
         {title}
       </h1>
       <section className='py-4 max-container'>
-        {news &&
+        {news ?
           <>
             <NewsList newsResponse={news} />
             <LoadMoreButton />
-          </>}
+          </> :
+          <Loading />
+        }
       </section>
     </main>
-  </>
+  </div>
   )
 }

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useNews } from '../contexts/NewsContext.jsx'
-import Nav from '../components/Nav.jsx'
+import Navbar from '../components/Navbar.jsx'
 import SearchBar from '../components/SearchBar.jsx'
 import Announcements from '../components/Announcements.jsx'
 import NewsList from '../components/NewsList.jsx'
+import Footer from '../components/Footer.jsx'
+import LoadingSpinner from '../components/LoadingSpinner.jsx'
+import styles from '../styles.js'
 
 function Home() {
   const { fetchHomePageNews } = useNews()
@@ -22,7 +25,7 @@ function Home() {
     return (
       <Link
         to={href}
-        className='flex w-fit items-baseline gap-6 py-3 my-4 group hover:translate-x-1 transition-all '
+        className='header-link py-2 mt-4 flex w-fit items-baseline gap-4 group hover:translate-x-1 transition-all '
       >
         <h2 className='text-2xl md:text-3xl font-semibold'>
           {title}
@@ -35,15 +38,15 @@ function Home() {
   function News() {
     return (
       <>
-        <section>
+        <section className='articles'>
           <SectionHeader title='Articles' href='/articles' />
           <NewsList newsResponse={news.articles} />
         </section>
-        <section>
+        <section className='blogs'>
           <SectionHeader title='Blogs' href='/blogs' />
           <NewsList newsResponse={news.blogs} />
         </section>
-        <section>
+        <section className='reports'>
           <SectionHeader title='Reports' href='/reports' />
           <NewsList newsResponse={news.reports} />
         </section>
@@ -51,19 +54,26 @@ function Home() {
     )
   }
 
+  function Loading() {
+    return (
+      <div className='flex flex-col pt-20 pb-10 justify-center items-center'>
+        <h1 className='text-2xl font-semibold'>Getting News...</h1>
+        <br />
+        <LoadingSpinner />
+      </div>
+    )
+  }
+
   return (
-    <>
-      <Nav />
-      <main className='padding-x py-4 max-container'>
-        <section className='py-4'>
-          <SearchBar />
-        </section>
-        <section className='py-4'>
-          <Announcements />
-        </section>
-        {news && <News />}
+    <div className='home bg-constellation'>
+      <Navbar />
+      <main className={`${styles.pageWidth}`}>
+        <SearchBar />
+        <Announcements />
+        {news ? <News /> : <Loading />}
       </main >
-    </>
+      <Footer />
+    </div>
   )
 }
 
