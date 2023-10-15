@@ -6,6 +6,7 @@ import Articles from './pages/Articles'
 import Blogs from './pages/Blogs'
 import Reports from './pages/Reports'
 import SearchResults from './pages/SearchResults'
+import Login from './pages/Login'
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Hero />} />
-          <Route path='/home' element={<Home />} />
+          <Route path='login' element={<Login />} />
+          <Route path='home' element={<Home />} />
           <Route path='articles' element={<Articles />} />
           <Route path='blogs' element={<Blogs />} />
           <Route path='reports' element={<Reports />} />
