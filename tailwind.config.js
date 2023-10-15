@@ -5,7 +5,7 @@ const lightTheme = {
     'constellation': 'url("/src/assets/backgrounds/constellation-light.svg")',
     'hamburger': 'url("/src/assets/icons/hamburger-black.svg")',
     'satellite': 'url("/src/assets/icons/satellite-black.svg")',
-    'semi-transparent': 'linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.0))',
+    'semi-transparent': 'linear-gradient(rgba(250, 250, 250, 1), rgba(255, 255, 255, 0.0))',
   },
   colors: {
     primary: 'black',

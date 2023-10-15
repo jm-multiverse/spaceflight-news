@@ -14,7 +14,7 @@ export default function Navbar() {
           </div>
           <h1 className=''>Spaceflight News</h1>
         </Link>
-        <ul className="flex gap-12">
+        <ul className="flex gap-12 max-lg:hidden">
           {/* Map through navigation links */}
           {navLinks.map((item) => (
             <li key={item.label}>
@@ -24,7 +24,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <div className='bg-hamburger hidden bg-no-repeat bg-center bg-contain w-10 h-10' width={25} height={25} >
+        <div className='bg-hamburger hidden max-lg:block bg-no-repeat bg-center bg-contain w-10 h-10' width={25} height={25} >
         </div>
       </nav>
     </header>
