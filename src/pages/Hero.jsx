@@ -12,7 +12,7 @@ export default function Hero() {
             <div className='image-container p-2 md:p-0'>
               <div className='bg-satellite bg-no-repeat bg-contain bg-center h-full w-full min-w-[200px] min-h-[200px] sm:min-h-[300px] sm:min-w-[300px] max-w-fit max-h-fit m-auto animate-pulse-slow'></div>
             </div>
-            <div className='text-4xl sm:text-5xl font-bold font-poppins flex flex-col leading-relaxed max-w-[570px]'>
+            <div className='sm:text-5xl xs:text-4xl text-3xl font-bold font-poppins flex flex-col leading-relaxed max-w-[500px]'>
               <h1>Elevating Space Announcements:&nbsp;</h1>
               <h2>Your Cosmic News Hub</h2>
               <p className='py-4 text-base sm:text-lg font-normal'>Our mission is to provide a news and information service which helps our readers to stay informed about the latest developments in spaceflight.</p>

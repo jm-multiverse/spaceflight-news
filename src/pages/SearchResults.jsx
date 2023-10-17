@@ -54,7 +54,7 @@ function SearchResults() {
       <main className={`${styles.pageWidth}`}>
         <SearchBar />
         <h1 className='py-4 text-2xl md:text-3xl font-semibold'>
-          Search results for "{q}"
+          Search results for "{q}" in {filter}
         </h1>
         {/* {console.log(searchResults)} */}
         {searchResults ? <RenderResults /> : <Loading />}

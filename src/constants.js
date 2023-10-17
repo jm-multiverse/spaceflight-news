@@ -13,20 +13,17 @@ export const footerLinks = [
     title: "Useful Links",
     links: [
       {
-        name: "Content",
-        link: "https://www.spaceflight-news.com/content/",
+        name: "Contributing Guidelines",
+        link: "https://www.spaceflight-news.com/contributing/",
       },
       {
-        name: "How it Works",
-        link: "https://www.spaceflight-news.com/how-it-works/",
+        name: "Subscriptions",
+        link: "https://www.spaceflight-news.com/become-a-partner/",
       },
+
       {
-        name: "Create",
-        link: "https://www.spaceflight-news.com/create/",
-      },
-      {
-        name: "Explore",
-        link: "https://www.spaceflight-news.com/explore/",
+        name: "Privacy Policy",
+        link: "https://www.spaceflight-news.com/privacy/",
       },
       {
         name: "Terms & Services",
@@ -37,38 +34,40 @@ export const footerLinks = [
   {
     title: "Community",
     links: [
+
       {
-        name: "Help Center",
-        link: "https://www.spaceflight-news.com/help-center/",
+        name: "Spaceflight News API",
+        link: "https://www.spaceflight-news.com/spaceflight-news-api/",
       },
       {
-        name: "Partners",
-        link: "https://www.spaceflight-news.com/partners/",
+        name: "TheSpaceDevs GitHub",
+        link: "https://www.spaceflight-news.com/thespacedevs-github/",
       },
       {
         name: "Suggestions",
         link: "https://www.spaceflight-news.com/suggestions/",
       },
       {
-        name: "Blog",
-        link: "https://www.spaceflight-news.com/blog/",
-      },
-      {
-        name: "Newsletters",
-        link: "https://www.spaceflight-news.com/newsletters/",
+        name: "Contact Us",
+        link: "https://www.spaceflight-news.com/contact-us/",
       },
     ],
   },
   {
-    title: "Partner",
+    title: "Forums",
     links: [
       {
-        name: "Our Partner",
-        link: "https://www.spaceflight-news.com/our-partner/",
+        name: "Spaceflight News Forums",
+        link: "https://www.spaceflight-news.com/forums/",
+      },
+
+      {
+        name: "Developer Blog",
+        link: "https://www.spaceflight-news.com/blog/",
       },
       {
-        name: "Become a Partner",
-        link: "https://www.spaceflight-news.com/become-a-partner/",
+        name: "Newsletter",
+        link: "https://www.spaceflight-news.com/newsletter/",
       },
     ],
   },
