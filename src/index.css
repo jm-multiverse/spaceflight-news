@@ -12,3 +12,7 @@ body,
 #root {
   @apply w-full h-full;
 }
+
+.full {
+  @apply min-w-full min-h-full;
+}
