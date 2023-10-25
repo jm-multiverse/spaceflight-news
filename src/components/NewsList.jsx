@@ -8,7 +8,7 @@ export default function NewsList({ newsResponse }) {
           const date = new Date(article.published_at)
           return (
             <article key={article.id}
-              className='p-8 mb-8 bg-white border-white border-2 rounded-lg shadow-lg hover:cursor-pointer hover:translate-x-2 hover:border-slate-800 transition ease-linear'
+              className='p-8 mb-8 bg-white border-white border-2 rounded-lg shadow-lg hover:cursor-pointer hover:translate-x-1 hover:border-slate-800 transition ease-linear'
             >
               <a href={article.url} target='_blank'>
                 <h2 className='md:text-2xl text-lg font-medium mb-4'>{article.title}</h2>

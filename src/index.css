@@ -16,3 +16,26 @@ body,
 .full {
   @apply min-w-full min-h-full;
 }
+
+.bg-mosaic {
+  background-image: url('./assets/backgrounds/jwst-orion-mosaic.jpg');
+  background-size: cover;
+  background-position: top;
+  background-size: 100%;
+
+}
+
+.bold-drop-shadow {
+  box-shadow: 10px 10px 0px 10px black, -10px -10px 0px 10px slategray;
+}
+
+.bg-triangle {
+  background-image: url("/src/assets/backgrounds/parabolic-triangle-9.svg");
+  background-size: 260%;
+  background-position: center;
+}
+
+.semitransparent {
+  background-color: #f4f6f87a;
+  backdrop-filter: blur(50px);
+}

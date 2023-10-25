@@ -6,6 +6,8 @@ const navLinks = [
   { href: "/articles", label: "Articles" },
   { href: "/blogs", label: "Blogs" },
   { href: "/reports", label: "Reports" },
+  { href: "/login", label: "Log In" },
+
 ];
 
 export default function Navbar() {
@@ -25,7 +27,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="p-4">
+    <nav className="p-4 border-b b semitransparent">
       <div className="flex justify-between items-center max-w-[2000px] m-auto whitespace-nowrap">
 
         {/* Logo */}
@@ -35,11 +37,11 @@ export default function Navbar() {
             alt="satellite icon"
           >
           </div>
-          <h1 className='text-xl font-thin'>Spaceflight News</h1>
+          <h1 className='text-lg sm:text-xl font-thin'>Spaceflight News</h1>
         </Link>
 
         {/* Search */}
-        <div className='justify-center flex-grow px-9 xl:px-16 max-w-[600px] lg:max-w-[800px] hidden sm:flex '>
+        <div className='justify-center flex-grow px-9 xl:px-16 max-w-[600px] lg:max-w-[800px] hidden lg:flex '>
           <input type="text" placeholder="Search" className="grow rounded-l-md m-h-full bg-slate-100 text-slate-900 px-4 focus:ring-0 focus:outline-none focus:border-slate-200" />
           <button className="w-1/3 max-w-[100px] h-10 bg-slate-100 rounded-r-md hover:bg-slate-200 min-w-[50px]">
             <svg
@@ -62,7 +64,7 @@ export default function Navbar() {
 
 
         {/* Navigation Links */}
-        <ul className="flex gap-9 xl:gap-12 max-lg:hidden items-center">
+        <ul className="flex gap-8 xl:gap-12 max-md:hidden items-center">
           {navLinks.map((item) => (
             <li key={item.label} >
               <Link to={item.href}>{item.label}</Link>
@@ -70,7 +72,6 @@ export default function Navbar() {
           ))}
           <div className='flex gap-6 xl:gap-8'>
             <Link to='/login' className='font-semibold'>Sign Up</Link>
-            <Link to='/login' className='font-semibold'>Log In</Link>
           </div>
         </ul>
 
@@ -95,7 +96,7 @@ export default function Navbar() {
           </button>
 
           {/* Hamburger Menu */}
-          <button className="lg:hidden" onClick={toggleNav}>
+          <button className="md:hidden" onClick={toggleNav}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

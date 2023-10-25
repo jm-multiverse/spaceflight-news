@@ -25,7 +25,7 @@ function Home() {
     return (
       <Link
         to={href}
-        className='header-link py-2 mt-4 flex w-fit items-baseline gap-4 group hover:translate-x-1 transition-all '
+        className='header-link py-6 flex w-fit items-baseline gap-4 group hover:translate-x-1 transition-all '
       >
         <h2 className='text-2xl md:text-3xl font-semibold'>
           {title}
@@ -37,7 +37,7 @@ function Home() {
 
   function News() {
     return (
-      <>
+      <div className='grid grid-cols-3 gap-6'>
         <section className='articles'>
           <SectionHeader title='Articles' href='/articles' />
           <NewsList newsResponse={news.articles} />
@@ -50,7 +50,7 @@ function Home() {
           <SectionHeader title='Reports' href='/reports' />
           <NewsList newsResponse={news.reports} />
         </section>
-      </>
+      </div>
     )
   }
 
@@ -65,7 +65,7 @@ function Home() {
   }
 
   return (
-    <div className='home bg-constellation'>
+    <div className='home bg-slate-50'>
       <Navbar />
       <main className={`${styles.pageWidth}`}>
         <SearchBar />
