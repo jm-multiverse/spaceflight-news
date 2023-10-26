@@ -4,11 +4,13 @@ import Navbar from '../components/Navbar'
 
 export default function Login() {
   return (
-    <section class="bg-constellation">
-      <Navbar />
-      <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 bg-mosaic bg-cover bg-no-repeat">
-        <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 ">
-          <a href="#" class="flex items-center justify-center p-6 pb-4 text-2xl font-semibold">
+    <div class="flex flex-col bg-mosaic bg-cover h-full">
+      <div className='bg-slate-50'>
+        <Navbar />
+      </div>
+      <div class="flex-grow flex flex-col items-center justify-center p-4 mx-auto">
+        <div class="w-full bg-white rounded-lg shadow-lg md:p-6">
+          <a href="#" class="flex items-center justify-center p-4 pb-4 text-2xl font-semibold">
             <div class="w-8 h-8 mr-2 bg-satellite bg-no-repeat bg-contain" alt="logo"></div>
             Spaceflight News
           </a>
@@ -85,6 +87,6 @@ export default function Login() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }

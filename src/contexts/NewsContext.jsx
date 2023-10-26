@@ -24,8 +24,8 @@ export const NewsProvider = ({ children }) => {
   }
 
   async function fetchHomePageNews() {
-    const articles = await fetchSchema('articles', { limit: 4 })
-    const blogs = await fetchSchema('blogs', { limit: 4 })
+    const articles = await fetchSchema('articles', { limit: 2 })
+    const blogs = await fetchSchema('blogs', { limit: 2 })
     const reports = await fetchSchema('reports', { limit: 2 })
     const news = { articles, blogs, reports }
     return news
@@ -65,11 +65,16 @@ export const NewsProvider = ({ children }) => {
     return 'Invalid filter: ' + filter
   }
 
+  async function fetchNewsSites() {
+    return await fetchSchema('info')
+  }
+
 
   return <NewsContext.Provider value={{
     fetchSchema,
     fetchHomePageNews,
-    search
+    search,
+    fetchNewsSites,
   }} >
     {children}
   </NewsContext.Provider>

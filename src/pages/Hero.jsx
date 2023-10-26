@@ -13,7 +13,7 @@ export default function Hero() {
     <div className='bg-triangle full flex flex-col'>
       <div className='min-h-screen flex flex-col'>
         <Navbar />
-        <div className=' bg-fit flex-grow flex flex-col justify-center items-center p-10'>
+        <div className=' flex-grow flex flex-col justify-center items-center p-10'>
           <div className='semitransparent bold-drop-shadow py-12 px-4 sm:p-16 md:py-24 md:px-16  my-10 flex flex-col lg:flex-row justify-center items-center gap-10 xl:gap-18'>
             <div className='text-center max-w-xl'>
               <h1 className='mb-2 text-5xl sm:text-6xl text-slate-900 font-thin'>Spaceflight News</h1>

@@ -10,13 +10,16 @@ import LoadingSpinner from '../components/LoadingSpinner.jsx'
 import styles from '../styles.js'
 
 function Home() {
-  const { fetchHomePageNews } = useNews()
+  const { fetchHomePageNews, fetchNewsSites } = useNews()
   const [news, setNews] = useState(null)
+  const [newsSites, setNewsSites] = useState(null)
 
   useEffect(() => {
     async function getNews() {
       const news = await fetchHomePageNews()
-      setNews(news)
+      const newsSites = await fetchNewsSites()
+      // setNews(news)
+      // setNewsSites(newsSites.news_sites)
     }
     getNews()
   }, [])
@@ -37,7 +40,7 @@ function Home() {
 
   function News() {
     return (
-      <div className='grid grid-cols-3 gap-4'>
+      <div className=''>
         <section className='articles'>
           <SectionHeader title='Articles' href='/articles' />
           <NewsList newsResponse={news.articles} />
@@ -64,16 +67,45 @@ function Home() {
     )
   }
 
+  function SideMenu() {
+    console.log(newsSites)
+    return (
+      <aside className='whitespace-nowrap'>
+        <h2 className='text-2xl mb-3'>Filter</h2>
+        <details open className='transition-all'>
+          <summary className='text-xl mb-2'>News Site</summary>
+          <ul className='indent-2'>
+            {newsSites &&
+              newsSites.map(n =>
+                <li className='text-slate-900 hover:cursor-pointer hover:text-slate-600'>{n}</li>
+              )
+            }
+          </ul>
+        </details>
+
+      </aside>
+    )
+  }
+
   return (
-    <div className='home bg-ellipse flex flex-col min-h-screen'>
-      <div className='backdrop-blur-sm'>
-        <Navbar />
-        <main className={`${styles.pageWidth} flex-grow flex flex-col`}>
-          <SearchBar />
-          <Announcements />
-          {news ? <News /> : <Loading />}
+    <div className='bg-home flex flex-col min-h-screen'>
+      <Navbar />
+      <div className='page-width p-8 flex-grow flex flex-col semitransparent rounded-lg'>
+        <main className='flex-grow flex flex-col'>
+          <div className='flex-grow grid grid-cols-2'>
+            <div className='p-4 pr-6 h-fit rounded-md'>
+              <SideMenu />
+            </div>
+            <div className='flex-grow'>
+              <Announcements />
+              <SearchBar />
+              {news ? <News /> : <Loading />}
+            </div>
+          </div>
         </main >
-        <Footer />
+        <div className='semitransparent'>
+          <Footer />
+        </div>
       </div>
     </div>
   )

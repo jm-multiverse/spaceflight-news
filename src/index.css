@@ -17,34 +17,30 @@ body,
   @apply min-w-full min-h-full;
 }
 
-.bg-mosaic {
-  background-image: url('./assets/backgrounds/jwst-orion-mosaic.jpg');
-  background-size: cover;
-  background-position: top;
-  background-size: 100%;
-
-}
-
 .bold-drop-shadow {
   box-shadow: 10px 10px 0px 10px black, -10px -10px 0px 10px slategray;
 }
 
 .semitransparent {
-  background-color: #f4f6f87a;
+  background-color: #f4f6f8b2;
   backdrop-filter: blur(50px);
 }
 
 .bg-triangle {
-  background-image: url("/src/assets/backgrounds/parabolic-triangle-9.svg");
+  background-image: url("/src/assets/backgrounds/parabolic-triangle-4.svg");
   background-size: 260%;
   background-position: center;
+  background-attachment: fixed;
 }
 
-.bg-ellipse {
-  /* background-image: url("/src/assets/backgrounds/parabolic-triangle-4.svg"); */
-  background-image: linear-gradient(#f8fafc73, #f8fafcdb),
-    url("/src/assets/backgrounds/parabolic-triangle-4.svg");
-  background-size: 290%;
+.bg-home {
+  background-image: url("/src/assets/backgrounds/endless-constellation-2.svg");
+  /* background-image: linear-gradient(#f8fafc73, #f8fafcdb),
+    url("/src/assets/backgrounds/endless-constellation-2.svg"); */
   background-position: center;
+  background-attachment: fixed;
+}
 
+.page-width {
+  @apply px-6 max-w-[2000px] lg:w-11/12 m-auto
 }
