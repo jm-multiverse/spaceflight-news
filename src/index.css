@@ -26,6 +26,11 @@ body,
   backdrop-filter: blur(50px);
 }
 
+.semitransparent-light {
+  background-color: #f4f6f8b2;
+  backdrop-filter: blur(5px);
+}
+
 .bg-triangle {
   background-image: url("/src/assets/backgrounds/parabolic-triangle-4.svg");
   background-size: 260%;
@@ -35,12 +40,10 @@ body,
 
 .bg-home {
   background-image: url("/src/assets/backgrounds/endless-constellation-2.svg");
-  /* background-image: linear-gradient(#f8fafc73, #f8fafcdb),
-    url("/src/assets/backgrounds/endless-constellation-2.svg"); */
   background-position: center;
   background-attachment: fixed;
 }
 
 .page-width {
-  @apply px-6 max-w-[2000px] lg:w-11/12 m-auto
+  @apply max-w-[2000px] lg:w-11/12 m-auto
 }

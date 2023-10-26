@@ -11,7 +11,7 @@ const Footer = () => (
           alt="logo"
           className="w-[266px] h-[72.14px] object-contain"
         />
-        <p className={`text-lg mt-4 max-w-[312px]`}>
+        <p className={`text-[17px] text-center mt-4 max-w-[312px]`}>
           Delivering space news that's tailored, informative, and up-to-the-minute.
         </p>
       </div>
@@ -38,8 +38,8 @@ const Footer = () => (
       </div>
     </div>
 
-    <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
-      <p className="font-normal text-center text-[18px] leading-[27px]">
+    <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#858585]">
+      <p className="font-normal text-center text-[16px] leading-[27px]">
         Copyright Ⓒ 2023 Spaceflight News. All Rights Reserved.
       </p>
 
