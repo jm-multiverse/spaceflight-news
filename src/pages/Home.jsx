@@ -37,7 +37,7 @@ function Home() {
 
   function News() {
     return (
-      <div className='grid grid-cols-3 gap-6'>
+      <div className='grid grid-cols-3 gap-4'>
         <section className='articles'>
           <SectionHeader title='Articles' href='/articles' />
           <NewsList newsResponse={news.articles} />
@@ -56,8 +56,8 @@ function Home() {
 
   function Loading() {
     return (
-      <div className='flex flex-col pt-20 pb-10 justify-center items-center'>
-        <h1 className='text-2xl font-semibold'>Getting News...</h1>
+      <div className='flex-grow flex flex-col pt-20 pb-10 justify-center items-center'>
+        <h1 className='text-2xl font-thin'>Fetching  News...</h1>
         <br />
         <LoadingSpinner />
       </div>
@@ -65,14 +65,16 @@ function Home() {
   }
 
   return (
-    <div className='home bg-slate-50'>
-      <Navbar />
-      <main className={`${styles.pageWidth}`}>
-        <SearchBar />
-        <Announcements />
-        {news ? <News /> : <Loading />}
-      </main >
-      <Footer />
+    <div className='home bg-ellipse flex flex-col min-h-screen'>
+      <div className='backdrop-blur-sm'>
+        <Navbar />
+        <main className={`${styles.pageWidth} flex-grow flex flex-col`}>
+          <SearchBar />
+          <Announcements />
+          {news ? <News /> : <Loading />}
+        </main >
+        <Footer />
+      </div>
     </div>
   )
 }

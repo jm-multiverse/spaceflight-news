@@ -21,7 +21,7 @@ export default function Hero() {
               <p className='py-4 sm:text-lg font-normal'>Our mission is to provide a news and information service which helps our readers to stay informed about the latest developments in spaceflight.</p>
             </div>
             <img src={researchSatellite} alt='spacex logo' className='sm:h-96 mt-4' />
-            <Link to='/articles' className='mt-4 flex items-center justify-center'>
+            <Link to='/home' className='mt-4 flex items-center justify-center'>
               <div className=' text-black p-3 border-2 border-black text-2xl flex items-center gap-2 transition-all duration-200 hover:bg-black hover:text-white hover:translate-x-2'>
                 Get Started
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">

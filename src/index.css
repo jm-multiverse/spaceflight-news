@@ -29,13 +29,22 @@ body,
   box-shadow: 10px 10px 0px 10px black, -10px -10px 0px 10px slategray;
 }
 
+.semitransparent {
+  background-color: #f4f6f87a;
+  backdrop-filter: blur(50px);
+}
+
 .bg-triangle {
   background-image: url("/src/assets/backgrounds/parabolic-triangle-9.svg");
   background-size: 260%;
   background-position: center;
 }
 
-.semitransparent {
-  background-color: #f4f6f87a;
-  backdrop-filter: blur(50px);
+.bg-ellipse {
+  /* background-image: url("/src/assets/backgrounds/parabolic-triangle-4.svg"); */
+  background-image: linear-gradient(#f8fafc73, #f8fafcdb),
+    url("/src/assets/backgrounds/parabolic-triangle-4.svg");
+  background-size: 290%;
+  background-position: center;
+
 }
