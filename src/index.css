@@ -20,6 +20,17 @@ body {
   flex-direction: column;
 }
 
+.bg-hero {
+  background-image: url("/src/assets/backgrounds/parabolic-triangle-4.svg");
+  background-size: 260%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.page {
+  @apply min-h-screen flex flex-col
+}
+
 .bold-drop-shadow {
   box-shadow: 10px 10px 0px 10px black, -10px -10px 0px 10px slategray;
 }
@@ -34,12 +45,6 @@ body {
   backdrop-filter: blur(5px);
 }
 
-.bg-triangle {
-  background-image: url("/src/assets/backgrounds/parabolic-triangle-4.svg");
-  background-size: 260%;
-  background-position: center;
-  background-attachment: fixed;
-}
 
 .bg-home {
   /* background-color: rgba(112, 128, 144, 0.866); */

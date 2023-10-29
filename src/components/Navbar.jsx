@@ -28,7 +28,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="p-4 border-b border-slate-300 semitransparent">
+    <nav className="p-4 px-5 border-b border-slate-300 semitransparent">
       <div className="flex justify-between items-center max-w-[2000px] m-auto whitespace-nowrap">
 
         {/* Logo */}
@@ -62,7 +62,6 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-
 
         {/* Navigation Links */}
         <ul className="flex gap-8 xl:gap-12 max-md:hidden items-center">
