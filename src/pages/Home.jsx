@@ -27,28 +27,28 @@ function Home() {
     return (
       <Link
         to={href}
-        className='header-link py-6 flex w-fit items-baseline gap-4 group hover:translate-x-1 transition-all '
+        className='header-link py-2 my-4 flex w-fit items-baseline gap-4 group hover:translate-x-1 transition-all '
       >
-        <h2 className='text-2xl md:text-3xl font-semibold'>
+        <h2 className='text-2xl font-semibold'>
           {title}
         </h2>
-        <span className='text-xl md:text-2xl font-normal text-transparent  transition-all duration-150 group-hover:text-slate-600 group-focus:text-slate-600'>Browse all</span>
+        <span className='text-xl font-normal text-transparent transition-all duration-150 group-hover:text-slate-600 group-focus:text-slate-600'>Browse all</span>
       </Link>
     )
   }
 
   function News() {
     return (
-      <div className=''>
-        <section className='articles'>
+      <div>
+        <section className='articles py-1'>
           <SectionHeader title='Articles' href='/articles' />
           <NewsList newsResponse={news.articles} />
         </section>
-        <section className='blogs'>
+        <section className='blogs py-1'>
           <SectionHeader title='Blogs' href='/blogs' />
           <NewsList newsResponse={news.blogs} />
         </section>
-        <section className='reports'>
+        <section className='reports py-1'>
           <SectionHeader title='Reports' href='/reports' />
           <NewsList newsResponse={news.reports} />
         </section>
@@ -69,7 +69,7 @@ function Home() {
   function SideMenu() {
     return (
       <aside className='border-r h-full pb-4'>
-        <h2 className='text-xl mb-3 p-2 border-gray-300'>Sort</h2>
+        <h2 className='text-xl mb-3 py-2 border-gray-300'>Sort</h2>
         <div className='mb-2'>
           <select className='p-2 ml-4 mb-4 rounded-lg border'>
             <option className='p-1'>Most Relevant</option>
@@ -78,13 +78,13 @@ function Home() {
           </select>
         </div>
 
-        <h2 className='text-xl mb-3 p-2 border-gray-300'>Filter</h2>
+        <h2 className='text-xl mb-1 py-2 border-gray-300'>Filter</h2>
         <details open className=''>
           <summary className=' p-3 hover:cursor-pointer'>News Site</summary>
           <ul className=''>
             {newsSites &&
               newsSites.map(n =>
-                <li className='p-2 ps-6  text-slate-900 hover:cursor-pointer hover:bg-slate-200'>{n}</li>
+                <li className='p-[5px] ps-6  text-slate-900 hover:cursor-pointer hover:bg-slate-200'>{n}</li>
               )
             }
           </ul>
@@ -96,17 +96,16 @@ function Home() {
 
   return (
     <div className='bg-home flex-grow flex flex-col'>
-      <div className=''>
-        <Navbar />
-      </div>
+      <Navbar />
+
       <div className='flex-grow flex flex-col px-6 semitransparent'>
         <div className='page-width flex-grow rounded-lg flex flex-col'>
           <main className='flex-grow flex flex-col rounded-lg'>
             <div className='flex-grow lg:grid lg:grid-flow-col'>
-              <div className='hidden lg:block w-[260px] pt-8 border-e border-slate-300'>
+              <div className='hidden lg:block w-[250px] pt-8 border-e border-slate-300'>
                 <SideMenu />
               </div>
-              <div className='flex-grow lg:col-span-9 px-12 py-8'>
+              <div className='flex-grow lg:col-span-9 md:ps-8 py-8'>
                 <Announcements />
                 <SearchBar />
                 {news ? <News /> : <Loading />}

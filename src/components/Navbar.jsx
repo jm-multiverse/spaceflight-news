@@ -34,11 +34,11 @@ export default function Navbar() {
         {/* Logo */}
         <Link className='group flex items-center gap-4' to="/">
           <div
-            className="group-hover:scale-125 transition-all duration-150 ease-in-out bg-satellite bg-no-repeat bg-center bg-contain w-10 h-10"
+            className="group-hover:animate-ping transition-all duration-150 ease-in-out bg-satellite bg-no-repeat bg-center bg-contain w-10 h-10"
             alt="satellite icon"
           >
           </div>
-          <h1 className='text-lg sm:text-xl font-thin'>Spaceflight News</h1>
+          <h1 className='text-lg sm:text-;g font-thin'>Spaceflight News</h1>
         </Link>
 
         {/* Search */}
@@ -64,7 +64,7 @@ export default function Navbar() {
         </div>
 
         {/* Navigation Links */}
-        <ul className="flex gap-8 xl:gap-12 max-md:hidden items-center">
+        <ul className="text-sm flex gap-8 xl:gap-12 max-md:hidden items-center">
           {navLinks.map((item) => (
             <li key={item.label} >
               <Link to={item.href}>{item.label}</Link>

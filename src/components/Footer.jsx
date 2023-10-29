@@ -11,7 +11,7 @@ const Footer = () => (
           alt="logo"
           className="w-[266px] h-[72.14px] object-contain"
         />
-        <p className={`text-[17px] text-center mt-4 max-w-[312px]`}>
+        <p className={`text-[17px] mt-4 max-w-[312px]`}>
           Delivering space news that's tailored, informative, and up-to-the-minute.
         </p>
       </div>

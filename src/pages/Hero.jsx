@@ -13,7 +13,7 @@ export default function Hero() {
         <div className='flex-grow flex flex-col justify-center items-center p-10'>
           <div className='semitransparent bold-drop-shadow py-12 px-4 sm:p-16 md:py-20 md:px-8  my-10 flex flex-col lg:flex-row justify-center items-center gap-8 xl:gap-16'>
             <div className='text-center max-w-xl'>
-              <h1 className='mb-2 text-5xl sm:text-6xl text-slate-900 font-thin'>
+              <h1 className='mb-2 text-5xl xl:text-[54px] xl:whitespace-nowrap text-slate-900 font-thin'>
                 Spaceflight News
               </h1>
               <h2 className='text-2xl text-slate-900 font-thin'>
@@ -26,11 +26,11 @@ export default function Hero() {
             <img
               src={researchSatellite}
               alt='Research satellite logo'
-              className='lg:h-80 xl:h-96 mt-4' />
+              className='lg:h-80 xl:h-80 mt-4' />
             <Link
               to='/home'
               className='mt-4 flex items-center justify-center'>
-              <div className='text-black p-3 border-[1.5px] border-black text-2xl flex items-center gap-2 transition-all duration-200 hover:bg-black hover:text-white hover:translate-x-2 lg:whitespace-nowrap'
+              <div className='text-black p-3 border-[1.5px] border-black text-xl flex items-center gap-2 transition-all duration-200 hover:bg-black hover:text-white hover:translate-x-2 lg:whitespace-nowrap'
               >
                 Get Started
                 <svg

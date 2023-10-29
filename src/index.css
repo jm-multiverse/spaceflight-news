@@ -45,7 +45,6 @@ body {
   backdrop-filter: blur(5px);
 }
 
-
 .bg-home {
   /* background-color: rgba(112, 128, 144, 0.866); */
   background-image: url("/src/assets/backgrounds/parabolic-triangle-11.svg");
@@ -60,7 +59,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 160%;
+  background-size: cover;
 }
 
 .page-width {

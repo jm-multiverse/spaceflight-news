@@ -59,7 +59,7 @@ export default function NewsScrollable({ title, schema }) {
   }
 
   return (
-    <div className='flex-grow news-scrollable bg-page h-full flex flex-col'>
+    <div className='flex-grow bg-page  news-scrollable h-full flex flex-col'>
       <div className='flex-grow'>
 
         <Navbar />
