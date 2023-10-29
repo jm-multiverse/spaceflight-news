@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 
 export default function Login() {
   return (
-    <div class="flex flex-col bg-mosaic bg-cover h-full">
+    <div class="flex-grow flex flex-col bg-mosaic bg-cover h-full">
       <div className='bg-slate-50'>
         <Navbar />
       </div>

@@ -28,7 +28,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="p-4 border-b b semitransparent">
+    <nav className="p-4 border-b border-slate-300 semitransparent">
       <div className="flex justify-between items-center max-w-[2000px] m-auto whitespace-nowrap">
 
         {/* Logo */}

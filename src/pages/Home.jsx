@@ -7,7 +7,6 @@ import Announcements from '../components/Announcements.jsx'
 import NewsList from '../components/NewsList.jsx'
 import Footer from '../components/Footer.jsx'
 import LoadingSpinner from '../components/LoadingSpinner.jsx'
-import styles from '../styles.js'
 
 function Home() {
   const { fetchHomePageNews, fetchNewsSites } = useNews()
@@ -69,14 +68,23 @@ function Home() {
 
   function SideMenu() {
     return (
-      <aside className='whitespace-nowrap mr-4 border-r h-full pb-4'>
-        <h2 className='text-xl p-2 mb-3 font-semibold'>Filter by</h2>
+      <aside className='border-r h-full pb-4'>
+        <h2 className='text-xl mb-3 p-2 border-gray-300'>Sort</h2>
+        <div className='mb-2'>
+          <select className='p-2 ml-4 mb-4 rounded-lg border'>
+            <option className='p-1'>Most Relevant</option>
+            <option className='p-1'>Most Recent</option>
+            <option className='p-1'>Most Popular</option>
+          </select>
+        </div>
+
+        <h2 className='text-xl mb-3 p-2 border-gray-300'>Filter</h2>
         <details open className=''>
-          <summary className='bg-slate-100 p-2'>News Site</summary>
-          <ul className='indent-8'>
+          <summary className=' p-3 hover:cursor-pointer'>News Site</summary>
+          <ul className=''>
             {newsSites &&
               newsSites.map(n =>
-                <li className='leading-7 text-slate-900 hover:cursor-pointer hover:text-slate-600'>{n}</li>
+                <li className='p-2 ps-6  text-slate-900 hover:cursor-pointer hover:bg-slate-200'>{n}</li>
               )
             }
           </ul>
@@ -87,24 +95,28 @@ function Home() {
   }
 
   return (
-    <div className='bg-home flex flex-col h-full'>
-      <Navbar />
-      <div className='page-width flex-grow flex flex-col semitransparent-light'>
-        <main className='flex-grow flex flex-col pt-4 rounded-lg'>
-          <div className='flex-grow grid grid-cols-12'>
-            <div className='col-span-2 ps-3'>
-              <SideMenu />
+    <div className='bg-home flex-grow flex flex-col'>
+      <div className=''>
+        <Navbar />
+      </div>
+      <div className='flex-grow flex flex-col px-6 semitransparent'>
+        <div className='page-width flex-grow rounded-lg flex flex-col'>
+          <main className='flex-grow flex flex-col rounded-lg'>
+            <div className='flex-grow lg:grid lg:grid-flow-col'>
+              <div className='hidden lg:block w-[260px] pt-8 border-e border-slate-300'>
+                <SideMenu />
+              </div>
+              <div className='flex-grow lg:col-span-9 px-12 py-8'>
+                <Announcements />
+                <SearchBar />
+                {news ? <News /> : <Loading />}
+              </div>
             </div>
-            <div className='flex-grow col-span-10 px-4'>
-              <Announcements />
-              <SearchBar />
-              {news ? <News /> : <Loading />}
-            </div>
-          </div>
-        </main >
-        <div className='border-t'>
+          </main >
 
-          <Footer />
+          <div className='border-t border-slate-300'>
+            <Footer />
+          </div>
         </div>
       </div>
     </div>

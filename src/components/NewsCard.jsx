@@ -4,7 +4,7 @@ export default function NewsCard({ article }) {
   const date = new Date(article.published_at)
   return (
     <article key={article.id}
-      className='mb-6 bg-slate-50 border-slate-200 border-2 rounded-lg shadow-lg hover:cursor-pointer hover:border-slate-500 transition ease-linear'
+      className='mb-6 semitransparent-light p-2 border-slate-300 border-2 rounded-lg shadow-lg hover:cursor-pointer hover:border-slate-500 transition ease-linear hover:translate-x-1'
     >
       <a href={article.url} target='_blank' className='flex flex-row gap-4'>
         {/* <img src={article.image_url} className='w-100 object-cover rounded-t-md lg:rounded-l-md lg:rounded-t-none lg:w-60' /> */}
