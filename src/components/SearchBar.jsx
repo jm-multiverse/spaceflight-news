@@ -20,7 +20,7 @@ export default function SearchBar() {
   }
 
   return (
-    <form className='searchbar py-4 pb-8 flex flex-col gap-2 sm:flex-row'>
+    <form className='searchbar py-4 flex flex-col gap-2 sm:flex-row'>
       <label htmlFor='search-filter' className='sr-only'>
         Search Filter
       </label>

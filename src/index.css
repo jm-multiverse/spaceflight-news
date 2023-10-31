@@ -8,7 +8,60 @@
 }
 
 html,
-body,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 #root {
-  @apply w-full h-full;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-hero {
+  background-image: url("/src/assets/backgrounds/parabolic-triangle-4.svg");
+  background-size: 260%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.page {
+  @apply min-h-screen flex flex-col
+}
+
+.bold-drop-shadow {
+  box-shadow: 10px 10px 0px 10px black, -10px -10px 0px 10px slategray;
+}
+
+.semitransparent {
+  background-color: #f4f6f8b2;
+  backdrop-filter: blur(50px);
+}
+
+.semitransparent-light {
+  background-color: #f4f6f8b2;
+  backdrop-filter: blur(5px);
+}
+
+.bg-home {
+  /* background-color: rgba(112, 128, 144, 0.866); */
+  background-image: url("/src/assets/backgrounds/parabolic-triangle-11.svg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-page {
+  background-image: url("/src/assets/backgrounds/rose-petals.svg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-width {
+  @apply max-w-[1600px] lg:w-11/12 mx-auto
 }

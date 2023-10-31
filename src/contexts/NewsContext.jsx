@@ -65,11 +65,16 @@ export const NewsProvider = ({ children }) => {
     return 'Invalid filter: ' + filter
   }
 
+  async function fetchNewsSites() {
+    return await fetchSchema('info')
+  }
+
 
   return <NewsContext.Provider value={{
     fetchSchema,
     fetchHomePageNews,
-    search
+    search,
+    fetchNewsSites,
   }} >
     {children}
   </NewsContext.Provider>

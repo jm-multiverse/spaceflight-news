@@ -58,25 +58,29 @@ export default function NewsScrollable({ title, schema }) {
     )
   }
 
-  return (<div className='news-scrollable bg-constellation h-full'>
-    <Navbar />
-    <main className={`${styles.pageWidth}`} >
-      <section className='py-4'>
-        <SearchBar />
-      </section>
-      <h1 className='py-4 text-2xl md:text-3xl font-semibold'>
-        {title}
-      </h1>
-      <section className='py-4 max-container'>
-        {news ?
-          <>
-            <NewsList newsResponse={news} />
-            <LoadMoreButton />
-          </> :
-          <Loading />
-        }
-      </section>
-    </main>
-  </div>
+  return (
+    <div className='flex-grow bg-page  news-scrollable h-full flex flex-col'>
+      <div className='flex-grow'>
+
+        <Navbar />
+        <main className={`${styles.pageWidth} semitransparent `} >
+          <section className='py-4'>
+            <SearchBar />
+          </section>
+          <h1 className='py-4 text-2xl md:text-3xl font-semibold'>
+            {title}
+          </h1>
+          <section className='py-4 max-container'>
+            {news ?
+              <>
+                <NewsList newsResponse={news} />
+                <LoadMoreButton />
+              </> :
+              <Loading />
+            }
+          </section>
+        </main>
+      </div>
+    </div>
   )
 }
