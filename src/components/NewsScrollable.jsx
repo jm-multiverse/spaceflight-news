@@ -15,7 +15,6 @@ export default function NewsScrollable({ title, schema }) {
   useEffect(() => {
     async function getNews() {
       const news = await fetchSchema(schema, { limit: 10, offset: 0 })
-      console.log(news)
       setNews(news)
     }
     getNews()
@@ -60,10 +59,10 @@ export default function NewsScrollable({ title, schema }) {
 
   return (
     <div className='flex-grow bg-page  news-scrollable h-full flex flex-col'>
-      <div className='flex-grow'>
+      <div className='flex-grow  semitransparent'>
 
         <Navbar />
-        <main className={`${styles.pageWidth} semitransparent `} >
+        <main className={`${styles.pageWidth} `} >
           <section className='py-4'>
             <SearchBar />
           </section>
