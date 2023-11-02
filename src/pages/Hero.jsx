@@ -11,7 +11,7 @@ export default function Hero() {
       <div className='page'>
         <Navbar />
         <div className='flex-grow flex flex-col justify-center items-center p-10'>
-          <div className='semitransparent bold-drop-shadow py-12 px-4 sm:p-16 md:py-20 md:px-8  my-10 flex flex-col lg:flex-row justify-center items-center gap-8 xl:gap-16'>
+          <div className='bg-white bold-drop-shadow py-12 px-4 sm:p-16 md:py-20 md:px-8  my-10 flex flex-col lg:flex-row justify-center items-center gap-8 xl:gap-16'>
             <div className='text-center max-w-xl'>
               <h1 className='mb-2 text-5xl xl:text-[54px] xl:whitespace-nowrap text-slate-900 font-thin'>
                 Spaceflight News
