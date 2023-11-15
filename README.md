@@ -13,9 +13,15 @@ It's integrated with the Spaceflight News API, a free-to-use, public API that pr
 * [The Space Devs GitHub](https://github.com/TheSpaceDevs)
 
 ## Table of Contents
+* [Deployment](#deployment)
 * [Local Development](#local-development)
 * [Contributing](#contributing)
 * [License](#license)
+
+## Deployment
+The site is deployed at
+* https://spaceflight-news-opu3.onrender.com/ 
+It was deployed using Render as the hosting service. When new commits are made to the main branch of this repo, new builds are triggered and deployed immediately.
 
 ## Local Development
 Getting started with local development is easy.  
