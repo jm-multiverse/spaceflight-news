@@ -2,7 +2,7 @@
 
 This is a website for browsing news articles, blogs, and reports related to spaceflight and launch events.  
 
-It was built using
+It was built with these technologies:
 * [React + Vite](https://vitejs.dev/)
 * [Tailwind CSS](https://tailwindcss.com/)
 * [npm](https://docs.npmjs.com/)
