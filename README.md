@@ -1,6 +1,6 @@
 # Spaceflight News
 
-This website is for browsing news related to spaceflight news articles, blogs, and reports. 
+This is a website for browsing news articles, blogs, and reports related to spaceflight and launch events.  
 
 It was built using
 * [React + Vite](https://vitejs.dev/)
