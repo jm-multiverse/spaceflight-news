@@ -31,7 +31,7 @@ Getting started with local development is easy.
   `npm run dev`
 
 This will spin up a development server on http://localhost:5173/.  
-Edit your code and you'll see your changes live in your browser.
+Edit your code and you'll see your changes live in your browser upon save.
 
 ## Contributing
 To contribute your changes to the application, make your development changes on a seperate branch.    
